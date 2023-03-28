@@ -1,0 +1,185 @@
+.wrap {
+    @include container ;
+    line-height: 1.5;
+    color: $bg-dark;
+}
+/*header start*/
+.header {
+    left: 0;
+    right: 0;
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    background-color: rgba(0,0,0,0.8); 
+    z-index: 10;
+    
+    h1 {
+        a {
+        background-image: url(../images/logo_w@svg.svg);
+        background-repeat: no-repeat;
+        display: block;
+        width: 120px;
+        height: 24px; 
+        @include hide-text;         
+        margin-left: 4rem;        
+        }
+        
+    }
+    .hidden-meau {
+        display: flex;
+        a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px;
+            padding-right: 2rem;
+            @include mobile-row {
+                border-bottom: 1px dashed #fff;
+                display: block;           
+            }
+            &:hover {
+                border-bottom: 3px solid white;
+                @include mobile-row {
+                    background-color: #fff;
+                    color: #000;
+                    transition: all 0.5s;
+                }
+            }
+        }
+        @include mobile-row {
+            flex-direction: column;
+            position: absolute;
+            top: 48px;        
+            width: 100%;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            max-height: 0px;
+            overflow: hidden;
+            transition: max-height 1s;
+        }
+    }
+    .hamburger-menu {
+        display: none;
+        @include mobile-row {
+            display: block;
+            color: #fff;
+            padding-right: 2rem;
+            font-size: 30px;
+        }
+    }
+   
+}
+.show-menu {
+   .hidden-meau {
+     @include mobile-row {
+        max-height: 500px;
+     }
+   }
+    
+}
+
+/*heder end*/
+/*banner start*/
+.banner {   
+    height: 420px;
+    background-image: url(../images/header_desktop.png);
+    background-size: over;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .bannerbar{
+       h2 ,p{
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.3);
+    text-align: center;   
+     }  
+    h2 {
+        font-size: 40px;
+        padding: 1rem;
+    }
+    }
+  
+}
+/*banner end*/
+/*footer start*/
+.footer {
+    padding: 2rem;
+    background-color: $bg;
+    display: flex;
+    justify-content: space-around;
+    @include pad {
+        display: block;
+    }
+    h3 {
+        font-size: 27px;       
+    }
+    .about {
+        width: 30%; 
+        margin-bottom: 5rem;    
+    }
+    .contact {
+        margin-right: 2rem;       
+        ul {
+            list-style: disc;
+            text-indent:5px;
+            
+            a {
+              text-decoration: none;  
+              color: #000;
+              position: relative;
+              &::after {
+                content:"";
+                position: absolute;
+                display: block;
+                border-bottom: 2px solid #000;
+                bottom: 0;
+                left: 0;
+                width: 0%;
+                transition: all 1s;
+                
+              }
+              &:hover::after{
+                width: 100%;
+            }
+            }
+        }
+    }
+    .about,.contact{
+        @include pad {
+            margin: 2rem auto;
+            width: 70%;
+        }
+    }
+    .logo {
+        @include pad {
+            display: flex;
+            justify-content: end;
+        }
+        h2 {
+            background-image: url(../images/logo_l@svg.svg);
+            width: 243px;
+            height: 48px;
+            @include hide-text;
+        }
+        .icon {
+            display: flex;
+            margin: 3rem 0 0 0;
+            a {
+                font-size: 40px;
+                margin: 1rem;
+            }
+            .google-icon {
+                color: #db4437;;
+            }
+            .twitter-icon {
+                color: #41abe1;
+            }
+            .fb-icon {
+                color: #3a5795;
+            }
+        }
+    }
+}
+/*footer end*/
