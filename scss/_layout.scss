@@ -89,6 +89,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @include mobile-row {
+        background-image: url(../images/header_mobile.png);
+    }
     .bannerbar{
        h2 ,p{
     color: #fff;

@@ -180,6 +180,11 @@ img {
       -ms-flex-align: center;
           align-items: center;
 }
+@media (max-width: 569px) {
+  .banner {
+    background-image: url(../images/header_mobile.png);
+  }
+}
 .banner .bannerbar h2, .banner .bannerbar p {
   color: #fff;
   background-color: rgba(0, 0, 0, 0.3);
