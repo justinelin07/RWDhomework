@@ -20,6 +20,7 @@
         input {
             font-size: 18px;
             width: 90%;
+            text-indent: 20px;
         }
         i {
             position: absolute;
@@ -37,6 +38,10 @@
         color: red;
         margin-bottom: 2rem;
         text-decoration: none;
+        &:hover {
+            color: #f1c512;
+            
+        }
     }
     .button {
         display: flex;

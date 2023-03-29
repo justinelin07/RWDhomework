@@ -11,21 +11,24 @@
 
 .cart-side {
    margin-right: 1rem;
-
+  
+   @include mobile-row {
+    width: 90%;
+   }
     h2 {
         font-size: 22px;   
         margin: 2rem auto;    
+        @include mobile-row {
+            text-align: center;
+        }
     }
     .side-menu {         
        :hover {
         background-color: $bg-dark;
         color: #fff;
        }
-        display: block;
-        @include mobile-row {
-         width: 400px;
-         margin-bottom: 2rem;
-        }
+        margin-bottom: 2rem;
+      
         li:first-child,
         li:nth-child(2),
         li:nth-child(3){
@@ -45,14 +48,13 @@
 }
 .cart-bar {
     display: flex;
-    justify-content: space-between;
-    @include mobile-row {
-        width: 450px;
-        justify-content: start;
-    }
+    justify-content: space-between;   
     .search {     
         width: 67%;
-        display: flex;     
+        display: flex;  
+        @include mobile-row {
+            width: 60%;
+        }   
         input {
             border: 3px solid #000;           
             width: 90%;
@@ -120,7 +122,11 @@
                 width: 64%;
             }
             @include mobile-row {
-                width: 80%;
+                width: 78%;
+            }
+            @include mobile {
+                width: 96%;
+                margin: 1rem;
             }
             img {
                 z-index: 2;

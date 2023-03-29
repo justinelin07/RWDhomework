@@ -458,6 +458,9 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 .reservation .reserve img {
@@ -489,7 +492,7 @@ img {
 }
 @media (max-width: 569px) {
   .reservation .reserve form {
-    width: 100%;
+    width: 80%;
   }
 }
 .reservation .reserve .vegan :nth-child(2) {
@@ -563,6 +566,7 @@ img {
 .login form .inputbar input {
   font-size: 18px;
   width: 90%;
+  text-indent: 20px;
 }
 .login form .inputbar i {
   position: absolute;
@@ -577,6 +581,9 @@ img {
   color: red;
   margin-bottom: 2rem;
   text-decoration: none;
+}
+.login form > a:hover {
+  color: #f1c512;
 }
 .login form .button {
   display: -webkit-box;
@@ -635,22 +642,26 @@ img {
 .cart-side {
   margin-right: 1rem;
 }
+@media (max-width: 569px) {
+  .cart-side {
+    width: 90%;
+  }
+}
 .cart-side h2 {
   font-size: 22px;
   margin: 2rem auto;
 }
+@media (max-width: 569px) {
+  .cart-side h2 {
+    text-align: center;
+  }
+}
 .cart-side .side-menu {
-  display: block;
+  margin-bottom: 2rem;
 }
 .cart-side .side-menu :hover {
   background-color: #3d1101;
   color: #fff;
-}
-@media (max-width: 569px) {
-  .cart-side .side-menu {
-    width: 400px;
-    margin-bottom: 2rem;
-  }
 }
 .cart-side .side-menu li:first-child,
 .cart-side .side-menu li:nth-child(2),
@@ -677,19 +688,16 @@ img {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-@media (max-width: 569px) {
-  .cart-bar {
-    width: 450px;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-  }
-}
 .cart-bar .search {
   width: 67%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+@media (max-width: 569px) {
+  .cart-bar .search {
+    width: 60%;
+  }
 }
 .cart-bar .search input {
   border: 3px solid #000;
@@ -771,7 +779,13 @@ img {
 }
 @media (max-width: 569px) {
   .cart-menu ul li {
-    width: 80%;
+    width: 78%;
+  }
+}
+@media (max-width: 375px) {
+  .cart-menu ul li {
+    width: 96%;
+    margin: 1rem;
   }
 }
 .cart-menu ul li img {
@@ -957,10 +971,14 @@ img {
   text-decoration: none;
   color: red;
 }
+.register .register-container .register-content .register-form a:hover {
+  color: #f1c512;
+}
 .register .register-container .register-content .register-form input {
   width: 100%;
   font-size: 18px;
   border-radius: 2px;
   border: none;
   margin-top: 3px;
+  text-indent: 20px;
 }
